@@ -7,15 +7,22 @@
  * @returns {string} The longest word in the input string
  */
 
-function longestWord(string) {
-  // This is your job. :)
+function findLongestWord(str) {
+  var words = str.split(' ');
+  var len = 0;
+
+ words.forEach(function(word){
+   if(word.length > len) {
+     len = word.length;
+   }
+ });
+
+  return len;
 }
 
-if (require.main === module) {
+if (require.main) {
   console.log('Running sanity checks for longestWord:');
 
-  // Add your own sanity checks here.
-  // How else will you be sure your code does what you think it does?
 }
 
 module.exports = longestWord;
